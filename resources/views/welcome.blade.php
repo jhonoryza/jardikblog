@@ -24,6 +24,7 @@
             <li><a href="#">Fly to the Moon</a></li>
             <li><a href="#">Dig to China</a></li>
             <li><a href="#">Swim Across the Sea</a></li>
+            <li><a href="#">Swim Across Ocean</a></li>
         </ul>
     </nav>   
 @endsection
