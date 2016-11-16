@@ -31,6 +31,7 @@
     <!-- Scripts -->
     <script src="../public/js/app.js"></script>
     <script src="../public/js/prism.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 <body>
     <div id="app">
