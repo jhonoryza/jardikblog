@@ -24,7 +24,7 @@
         <h2> Categories </h2>
         <ul class="nav nav-pills nav-stacked">
             @foreach($cat as $cats)
-                <li><a href="#">{{$cats->name}}</a></li>
+                <li><a href="#">{{$cats->name}} ({{ $cats->posts->count() }})</a></li>
             @endforeach
         </ul>
     </nav>   
