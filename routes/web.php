@@ -16,7 +16,8 @@ Route::get('/', function () {
     // foreach($datas as $data){
     //     echo $data->title;
     // }
-    return view('welcome', compact('data'));
+    $cat = App\Category::all();
+    return view('welcome', compact('data'), compact('cat'));
 });
 
 Auth::routes();

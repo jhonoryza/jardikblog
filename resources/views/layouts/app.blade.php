@@ -90,18 +90,20 @@
             </div>
         </nav>
     </div>
-    <div class="container">
-        <div id="content" class="col-md-8">
+    <div class="row">
+        <div id="content" class="col-md-9">
+            <div class="col-md-12">
             @yield('content')
+            </div>
         </div>
-        <div id="sidebar" class="col-md-4">
+        <div id="sidebar" class="col-md-3">
             @yield('sidebar')
-        </div>
+    </div>
+    <div class='row'>
         <div class="col-md-12">
             @yield('footer')
         </div>
-    </div>
-    
+    </div>    
     <!-- Scripts -->
     <script src="../public/js/app.js"></script>
     <script src="../public/js/prism.js"></script>

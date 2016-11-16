@@ -3,9 +3,11 @@
 @section('content')
 
     @foreach($data as $mydata)
-    <h1>{{$mydata->title}} </h1>
-    <h5><span class="glyphicon glyphicon-tag" aria-hidden="true">
-    Categories: {{$mydata->category->name}} </h5>
+    <h2>{{$mydata->title}} </h2>
+    <p><span class="glyphicon glyphicon-tag" aria-hidden="true">
+    {{$mydata->category->name}}
+    <span class="glyphicon glyphicon-time" aria-hidden="true">
+    {{$mydata->created_at}}</p>
     
     <?php
     $result = str_replace(' ', '&nbsp;', $mydata->content);
@@ -19,12 +21,11 @@
 @endsection
 @section('sidebar')
     <nav id="sidebar-nav">
-        <h1> Sidebar </h1>
+        <h2> Categories </h2>
         <ul class="nav nav-pills nav-stacked">
-            <li><a href="#">Fly to the Moon</a></li>
-            <li><a href="#">Dig to China</a></li>
-            <li><a href="#">Swim Across the Sea</a></li>
-            <li><a href="#">Swim Across Ocean</a></li>
+            @foreach($cat as $cats)
+                <li><a href="#">{{$cats->name}}</a></li>
+            @endforeach
         </ul>
     </nav>   
 @endsection
