@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="{{{ asset('/css/style.css') }}}" rel="stylesheet">
     <link href="{{{ asset('/css/prism.css') }}}" rel="stylesheet">
+    <link href="{{{ asset('/css/bootstrap-social.css') }}}" rel="stylesheet">
+    <link href="{{{ asset('/css/font-awesome.css') }}}" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
 <link href="{{{ asset('/css/bootstrap.min.css') }}}" rel="stylesheet">
@@ -47,7 +49,7 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         jardikblog
                     </a>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{ url('/about') }}">
                         about
                     </a>
                 </div>
@@ -98,7 +100,15 @@
             </div>
         </div>
         <div id="sidebar" class="col-md-3">
+            <div class="col-md-12">
             @yield('sidebar')
+            </div>
+        </div>
+        <div id="contactbar" class="col-md-3">
+            <div class="col-md-12">
+            @yield('contactbar')
+            </div>
+        </div>
     </div>
     <div class='row'>
         <div class="col-md-12">

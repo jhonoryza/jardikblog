@@ -16,7 +16,11 @@ Route::get('/', function () {
     $cat = App\Category::all();
     return view('welcome', compact('data'), compact('cat'));
 });
-
+Route::get('/about', function(){
+    $data = App\Post::orderBy('id', 'desc')->paginate(3);
+    $cat = App\Category::all();
+    return view('about', compact('data'), compact('cat'));
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -30,7 +34,7 @@ Route::patch('/addpost/{id}', 'HomeController@update')->name('addpost.update');
 Route::resource('categories', 'CategoryController');
 
 Route::get('listpost/{category_id}', function($id){
-    $data = App\Post::where('category_id', $id)->paginate(3);
+    $data = App\Post::where('category_id', $id)->orderBy('id', 'desc')->paginate(3);
     $cat = App\Category::all();
     return view('welcome', compact('data'), compact('cat'));
 })->name('listpost');;

@@ -1,22 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<h2>About me</h2>
+<p>Hi, I am Fajar Sidik Priatna,</p>  
+<p>a developer (who works on the web, desktop and embedded system) based on Indonesia. </p> 
+<p>Graduated from Physics Department of Padjadjaran University (UNPAD).</p> 
 
-    @foreach($data as $mydata)
-    <h2>{{$mydata->title}} </h2>
-    <p><span class="glyphicon glyphicon-tag" aria-hidden="true">
-    {{$mydata->category->name}}
-    <span class="glyphicon glyphicon-time" aria-hidden="true">
-    {{$mydata->created_at}}</p>
-    
-    <?php
-    $result = str_replace(' ', '&nbsp;', $mydata->content);
-    $result = nl2br($result);
-    ?>
-    <p>{!!$mydata->content!!}</p>
-    @endforeach
-    {{ $data->links() }}
-       
+If you find some bugs or you want to share something, you can contact me..
+
+<h2>Contact me</h2>
+Find me on <a href="https://plus.google.com/+FajarSidikPriatna">Google+</a>  / <a href="https://github.com/jhonoryza">Github</a>  / <a href="https://twitter.com/jardik7">Twitter</a>  or just say Hello at jardik.oryza@gmail.com.
 
 @endsection
 @section('sidebar')
