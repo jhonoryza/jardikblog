@@ -11,9 +11,9 @@
     <title>jardikblog</title>
 
     <!-- Styles -->
-    <link href="../public/css/prism.css" rel="stylesheet">
-    <link href="../public/css/style.css" rel="stylesheet">
-    <!--<link href="../public/css/app.css" rel="stylesheet">-->
+    <link href="{{{ asset('/css/style.css') }}}" rel="stylesheet">
+    <link href="{{{ asset('/css/prism.css') }}}" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -29,9 +29,8 @@
         ]); ?>
     </script>
     <!-- Scripts -->
-    <script src="../public/js/app.js"></script>
-    <script src="../public/js/prism.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{{{ asset('/js/prism.js') }}}"></script>
+    
 </head>
 <body>
     <div id="app">
