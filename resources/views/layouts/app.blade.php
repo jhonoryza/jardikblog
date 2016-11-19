@@ -11,6 +11,7 @@
     <title>jardikblog</title>
 
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="{{{ asset('/css/style.css') }}}" rel="stylesheet">
     <link href="{{{ asset('/css/prism.css') }}}" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

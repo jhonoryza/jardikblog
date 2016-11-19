@@ -25,6 +25,7 @@ Route::get('/addpost/create', 'HomeController@addpost')->name('addpost.create');
 Route::post('/addpost', 'HomeController@store')->name('addpost.store');
 Route::delete('/addpost/{id}', 'HomeController@destroy')->name('addpost.destroy');
 Route::get('/addpost/{id}/edit', 'HomeController@edit')->name('addpost.edit');
+Route::patch('/addpost/{id}', 'HomeController@update')->name('addpost.update');
 
 Route::resource('categories', 'CategoryController');
 

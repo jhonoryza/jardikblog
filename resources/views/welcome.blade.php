@@ -30,5 +30,5 @@
     </nav>   
 @endsection
 @section('footer')
-    <p class="text-center">2016 Copyright jardik - All Rights Reserved</p>
+    <p class="text-center">2016 Copyright @jardik - All Rights Reserved</p>
 @endsection

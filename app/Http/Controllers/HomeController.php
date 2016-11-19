@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Session;
 class HomeController extends Controller
 {
     /**
@@ -51,6 +51,24 @@ class HomeController extends Controller
         return redirect('/home');
     }
     public function edit($id){
-        echo $id;
+        $data = \App\Post::find($id);
+        $categories = \App\Category::pluck('name', 'id');
+        return view('editpost', compact('data'), compact('categories'));
+    }
+    public function update($id, Request $request){
+        $this->validate($request, [
+            'title' => 'required',
+            'content' => 'required'
+        ]);
+
+        $post = \App\Post::findOrFail($id);
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->category_id = $request->category;
+        $post->save();
+
+        Session::flash('flash_message', 'Task successfully added!');
+
+        return redirect('/home');
     }
 }
