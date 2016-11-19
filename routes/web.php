@@ -13,9 +13,6 @@
 
 Route::get('/', function () {
     $data = App\Post::orderBy('id', 'desc')->paginate(3);
-    // foreach($datas as $data){
-    //     echo $data->title;
-    // }
     $cat = App\Category::all();
     return view('welcome', compact('data'), compact('cat'));
 });
@@ -30,3 +27,9 @@ Route::delete('/addpost/{id}', 'HomeController@destroy')->name('addpost.destroy'
 Route::get('/addpost/{id}/edit', 'HomeController@edit')->name('addpost.edit');
 
 Route::resource('categories', 'CategoryController');
+
+Route::get('listpost/{category_id}', function($id){
+    $data = App\Post::where('category_id', $id)->paginate(3);
+    $cat = App\Category::all();
+    return view('welcome', compact('data'), compact('cat'));
+})->name('listpost');;
